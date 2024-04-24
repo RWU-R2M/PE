@@ -1,0 +1,12 @@
+flowchart LR
+    ns["ESC #1"] --> nb["Motor #1"]
+    n3["ESC #2"] --> nx["Motor #2"]
+    n5["ESC #3"] --> nl["Motor #3"]
+    ny["ESC #4"] --> nq["Motor #4"]
+    n1["PDU"] --> ns & n3 & n5 & ny & nc["Logic Rail"] & na["UPS"]
+    ne["Relais"] --> n1
+    nh["Kill Switch"] --> ne
+    nr["Battery"] --> ne
+    na --> nc
+    nc --> nj["PI 5"]
+
