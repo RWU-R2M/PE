@@ -1,5 +1,0 @@
-```csvpreview
-cross section, color
-
-
-```
