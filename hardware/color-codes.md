@@ -1,6 +1,6 @@
 # Color coding scheme
 
-color   | code      | cross-section | equivalent to | 
+color   | code*test*     | cross-section | equivalent to |  
 --------|-----------|---------------|---------------|
 white   | WH        |  0,5mm^2      | 21 AWG        |
 black   | BK        |  1,5mm^2      | 16 AWG        |
