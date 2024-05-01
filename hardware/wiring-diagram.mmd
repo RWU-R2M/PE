@@ -6,33 +6,30 @@ graph LR
 
 subgraph Circuit-Breaker
     direction TB
-    Kill-Switch <--> Relais
+    Kill-Switch <--> |1,5mm<sup>2| Relais
 end
 
 
 subgraph Drive-Train
     direction TB
-    ESC#1 --> Motor#1
-    ESC#2 --> Motor#2
-    ESC#3 --> Motor#3
-    ESC#4 --> Motor#4
+    ESC#1 --> |4mm<sup>2| Motor#1
+    ESC#2 --> |4mm<sup>2| Motor#2
+    ESC#3 --> |4mm<sup>2| Motor#3
+    ESC#4 --> |4mm<sup>2| Motor#4
 end
 
 subgraph Steering
     direction LR
-    Bus-Controller ---
-    Servo#1 ---
-    Servo#2 ---
-    Servo#3 ---
-    Servo#4
+    Bus-Controller --- 
+    |1,5mm<sup>2| Servo#1 ---
+    |1,5mm<sup>2| Servo#2 ---
+    |1,5mm<sup>2| Servo#3 ---
+    |1,5mm<sup>2| Servo#4
 end
 
 subgraph Computing
     direction LR
-    Backup-Battery
-    Logic-Rail
-    Raspberry-PI
-    Backup-Battery --> Logic-Rail --> Raspberry-PI & Computer
+    Backup-Battery --> |4mm<sup>2| Logic-Rail --> |1,5mm<sup>2| Raspberry-PI & Computer
 end
 
 Battery --> |10mm<sup>2| Fuse --> |10mm<sup>2|Circuit-Breaker --> |10mm<sup>2| Power-Distribution 
