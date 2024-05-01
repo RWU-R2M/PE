@@ -1,11 +1,11 @@
 # Color coding scheme
 
-color[^1]   | code[^2]  | cross-section[^3] | equivalent to |  
------------:|----------:|------------------:|--------------:|
-white       | WH        |  0,5mm^2          | 21 AWG        |
-black       | BK        |  1,5mm^2          | 16 AWG        |
-grey        | GY        |  4,0mm^2          | 12 AWG        |
-red         | RD        | 10,0mm^2          |  8 AWG        |
+color[^1]   | code[^2]  | cross-section[^3] | equivalent to | ampacity at 90°C  | 
+-----------:|----------:|------------------:|--------------:|------------------:|
+white       | WH        |  0,5mm^2          | 21 AWG        |  7 Amps           |
+black       | BK        |  1,5mm^2          | 16 AWG        | 18 Amps           |
+grey        | GY        |  4,0mm^2          | 12 AWG        | 30 Amps           |
+red         | RD        | 10,0mm^2          |  8 AWG        | 55 Amps           |
 
 
 
