@@ -1,11 +1,11 @@
 # Color coding scheme
 
-color   | code      | cross-section
---------|-----------|--------------
-white   | WH        |  0,5mm^2
-black   | BK        |  1,5mm^2
-grey    | GY        |  4,0mm^2
-red     | RD        | 10,0mm^2
+color   | code      | cross-section | equivalent to
+--------|-----------|---------------|-------------------
+white   | WH        |  0,5mm^2      | 21 AWG
+black   | BK        |  1,5mm^2      | 16 AWG
+grey    | GY        |  4,0mm^2      | 12 AWG
+red     | RD        | 10,0mm^2      |  8 AWG
 
 
 <details open >
