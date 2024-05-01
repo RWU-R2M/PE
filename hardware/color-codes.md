@@ -1,7 +1,7 @@
 # Color coding scheme
 
 color[^1]   | code[^2]  | cross-section[^3] | equivalent to |  
-------------|-----------|-------------------|---------------|
+-----------:|----------:|------------------:|--------------:|
 white       | WH        |  0,5mm^2          | 21 AWG        |
 black       | BK        |  1,5mm^2          | 16 AWG        |
 grey        | GY        |  4,0mm^2          | 12 AWG        |
