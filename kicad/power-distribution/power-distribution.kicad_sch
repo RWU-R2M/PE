@@ -1,0 +1,89 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "69571923-9525-47f2-bc7b-90210c31c06c")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 36.83 99.06)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "99badf10-0534-4ab3-8c31-1d9955ef5a25")
+		(property "Sheetname" "primary-pd"
+			(at 36.83 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "primary-pd.kicad_sch"
+			(at 36.83 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "power-distribution"
+				(path "/69571923-9525-47f2-bc7b-90210c31c06c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 99.06)
+		(size 12.7 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a6451e8e-5a31-4105-a64e-5eb2e305427c")
+		(property "Sheetname" "secondary-pd"
+			(at 68.58 98.3484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "secondary-pd.kicad_sch"
+			(at 68.58 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "power-distribution"
+				(path "/69571923-9525-47f2-bc7b-90210c31c06c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
