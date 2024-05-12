@@ -4,6 +4,9 @@
 	(generator_version "8.0")
 	(uuid "69571923-9525-47f2-bc7b-90210c31c06c")
 	(paper "A4")
+	(title_block
+		(date "2024-05-12")
+	)
 	(lib_symbols)
 	(sheet
 		(at 36.83 99.06)
