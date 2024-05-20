@@ -1,7 +1,7 @@
 ---
 title: "Wiring Diagram: Power"
 ---
- graph LR
+graph LR
 
 Primary-Battery --> |10mm<sup>2| Primary-Fuse
 Secondary-Battery --> |1,5mm<sup>2| Secondary-Fuse
@@ -16,19 +16,18 @@ Primary-Relais --> |10mm<sup>2| PD
 Secondary-Relais --> |1,5mm<sup>2| SD
 subgraph Power-Distribution
     direction LR
-    PD[Primary-Distribution \n & Fusing] --> Servo
-    SD[Secondary-Distribution \n & Fusing] --> 12V-Rail
-    
+    PD[Primary-Distribution \n & Protection] --> VPrim
+    SD[Secondary-Distribution \n & Protection] --> 12V-Rail & 5V-Rail
 end
 
-Servo --> |????| Steering
+VPrim --> |????| Steering
 subgraph Steering
     direction LR 
     Bus-Controller --- Servo#1 --- |????| Servo#2 --- |????| Servo#3 --- |????| Servo#4
 end
 
 
-PD --> |4x 4mm<sup>2| Drive-Train
+VPrim--> |4x 4mm<sup>2| Drive-Train
 12V-Rail --> |4x 0,5mm<sup>2| Drive-Train
 subgraph Drive-Train
     direction TB
@@ -38,10 +37,12 @@ subgraph Drive-Train
     ESC#4 --> |4mm<sup>2| Motor#4
 end
 
-SD --> |????| Control
+5V-Rail --> |????| Control
 subgraph Control
-    test
+    Raspberry-Pi
 end
 
 linkStyle 0,2,3,4,5,7 stroke:red
 linkStyle 1,6,8 stroke:yellow
+
+%%     PD[Primary-Distribution \n & Fusing] --> Servo
