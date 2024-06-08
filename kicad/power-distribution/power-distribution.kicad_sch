@@ -4,9 +4,204 @@
 	(generator_version "8.0")
 	(uuid "69571923-9525-47f2-bc7b-90210c31c06c")
 	(paper "A4")
-	(lib_symbols)
+	(title_block
+		(title "Power Distribution")
+		(date "2024-05-12")
+		(rev "A")
+		(company "Rover to Mars (R2M)")
+		(comment 1 "Leandro Ebner")
+		(comment 3 "Ravensburg-Weingarten University")
+	)
+	(lib_symbols
+		(symbol "power:+BATT"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+BATT"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+BATT\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power battery"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+BATT_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+BATT_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 55.88 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7c75874-b2cf-46e0-9b45-fcd1d0c9a6b7")
+		(property "Reference" "#PWR01"
+			(at 55.88 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 55.88 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 55.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 55.88 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26d5f3b7-1c0e-4dab-af44-b66d493e0d09")
+		)
+		(instances
+			(project "power-distribution"
+				(path "/69571923-9525-47f2-bc7b-90210c31c06c"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet
-		(at 36.83 99.06)
+		(at 83.82 52.07)
 		(size 12.7 3.81)
 		(fields_autoplaced yes)
 		(stroke
@@ -18,7 +213,7 @@
 		)
 		(uuid "99badf10-0534-4ab3-8c31-1d9955ef5a25")
 		(property "Sheetname" "primary-pd"
-			(at 36.83 98.3484 0)
+			(at 83.82 51.3584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27,7 +222,7 @@
 			)
 		)
 		(property "Sheetfile" "primary-pd.kicad_sch"
-			(at 36.83 103.4546 0)
+			(at 83.82 56.4646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44,7 +239,7 @@
 		)
 	)
 	(sheet
-		(at 68.58 99.06)
+		(at 104.14 50.8)
 		(size 12.7 3.81)
 		(fields_autoplaced yes)
 		(stroke
@@ -56,7 +251,7 @@
 		)
 		(uuid "a6451e8e-5a31-4105-a64e-5eb2e305427c")
 		(property "Sheetname" "secondary-pd"
-			(at 68.58 98.3484 0)
+			(at 104.14 50.0884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -65,7 +260,7 @@
 			)
 		)
 		(property "Sheetfile" "secondary-pd.kicad_sch"
-			(at 68.58 103.4546 0)
+			(at 104.14 55.1946 0)
 			(effects
 				(font
 					(size 1.27 1.27)

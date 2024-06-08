@@ -78,19 +78,6 @@
     "version": 3
   },
   "project": {
-    "files": [
-      {
-        "name": "power-distribution.kicad_sch",
-        "open": true,
-        "window": {
-          "display": 0,
-          "maximized": false,
-          "pos_x": 75,
-          "pos_y": 391,
-          "size_x": 2582,
-          "size_y": 1550
-        }
-      }
-    ]
+    "files": []
   }
 }

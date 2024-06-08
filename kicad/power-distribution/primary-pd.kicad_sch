@@ -4,5 +4,13 @@
 	(generator_version "8.0")
 	(uuid "2224324f-e56c-472d-ab42-929f2e0b8e1c")
 	(paper "A4")
+	(title_block
+		(title "Power Distribution")
+		(date "2024-05-12")
+		(rev "A")
+		(company "Rover to Mars (R2M)")
+		(comment 1 "Leandro Ebner")
+		(comment 3 "Ravensburg-Weingarten University")
+	)
 	(lib_symbols)
 )
