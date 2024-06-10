@@ -1,12 +1,12 @@
 ---
-title: "Wiring Diagram: Power"
+title: "Wiring Diagram: Power Electronics"
 ---
-graph LR
+graph TB
 
 Primary-Battery --> |10mm<sup>2| Primary-Fuse
 Secondary-Battery --> |1,5mm<sup>2| Secondary-Fuse
 subgraph Circuit-Braker
-    direction LR
+    direction TB
     Primary-Fuse --> |10mm<sup>2| Primary-Relais
     Primary-Fuse --> |1,5mm<sup>2| Kill-Switch --> |1,5mm<sup>2| Primary-Relais & Secondary-Relais  
     Secondary-Fuse --> |1,5mm<sup>2| Secondary-Relais
@@ -15,26 +15,27 @@ end
 Primary-Relais --> |10mm<sup>2| PD
 Secondary-Relais --> |1,5mm<sup>2| SD
 subgraph Power-Distribution
-    direction LR
-    PD[Primary-Distribution \n & Protection] --> VPrim
-    SD[Secondary-Distribution \n & Protection] --> 12V-Rail & 5V-Rail
+    direction TB
+    PD[Primary-Distribution \n 6x 4mm<sup>2] --> |4x 4mm<sup>2| PDF1[RTR \n ??A Fused]
+    PD --> |4mm<sup>2| PDF2[12V-Rail \n ??A Fused]
+    SD[Secondary-Distribution \n ??] --> SDF1[RTR \n ??A Fusedf] & SDF2[5V-Rail \n ??A Fused]
 end
 
-VPrim --> |????| Steering
+VPrim --> |1,5mm<sup>2| Steering
 subgraph Steering
     direction LR 
     Bus-Controller --- Servo#1 --- |????| Servo#2 --- |????| Servo#3 --- |????| Servo#4
 end
 
 
-VPrim--> |4x 4mm<sup>2| Drive-Train
-12V-Rail --> |4x 0,5mm<sup>2| Drive-Train
+PDF1--> |4x 4mm<sup>2| Drive-Train
+SDF1 --> |4x 0,5mm<sup>2| Drive-Train
 subgraph Drive-Train
     direction TB
-    ESC#1 --> |4mm<sup>2| Motor#1
-    ESC#2 --> |4mm<sup>2| Motor#2
-    ESC#3 --> |4mm<sup>2| Motor#3
-    ESC#4 --> |4mm<sup>2| Motor#4
+    ESC#1 --> |3x 4mm<sup>2| Motor#1
+    ESC#2 --> |3x 4mm<sup>2| Motor#2
+    ESC#3 --> |3x 4mm<sup>2| Motor#3
+    ESC#4 --> |3x 4mm<sup>2| Motor#4
 end
 
 5V-Rail --> |????| Control
@@ -44,5 +45,3 @@ end
 
 linkStyle 0,2,3,4,5,7 stroke:red
 linkStyle 1,6,8 stroke:yellow
-
-%%     PD[Primary-Distribution \n & Fusing] --> Servo
