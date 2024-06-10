@@ -1,34 +1,36 @@
 ---
 title: "Wiring Diagram: Power Electronics"
 ---
+
 graph TB
 
 Primary-Battery --> |10mm<sup>2| Primary-Fuse
-Secondary-Battery --> |1,5mm<sup>2| Secondary-Fuse
-subgraph Circuit-Braker
+Secondary-Battery --> |4mm<sup>2| Secondary-Fuse
+subgraph Circuit-Breaker
     direction TB
     Primary-Fuse --> |10mm<sup>2| Primary-Relais
     Primary-Fuse --> |1,5mm<sup>2| Kill-Switch --> |1,5mm<sup>2| Primary-Relais & Secondary-Relais  
-    Secondary-Fuse --> |1,5mm<sup>2| Secondary-Relais
+    Secondary-Fuse --> |4mm<sup>2| Secondary-Relais
 end
 
 Primary-Relais --> |10mm<sup>2| PD
-Secondary-Relais --> |1,5mm<sup>2| SD
+Secondary-Relais --> |4mm<sup>2| SD
 subgraph Power-Distribution
     direction TB
-    PD[Primary-Distribution \n 6x 4mm<sup>2] --> |4x 4mm<sup>2| PDF1[RTR \n ??A Fused]
-    PD --> |4mm<sup>2| PDF2[12V-Rail \n ??A Fused]
-    SD[Secondary-Distribution \n ??] --> SDF1[RTR \n ??A Fusedf] & SDF2[5V-Rail \n ??A Fused]
+    PD[Primary-Distribution \n 6x 4mm<sup>2] 
+    PD --> |4mm<sup>2| PDF1[12V-Rail \n 120W \n 6A F-Fused]
+    PD --> |4x 4mm<sup>2| PDF2[Prim-RTR \n 4x 7,5A M-Fused] 
+    SD[Secondary-Distribution \n 6x 1,5mm<sup>2] --> |1,5mm<sup>2| SDF1[Sec-RTR \n 5A F-Fused] & SDF2[5V-Rail \n 30W \n 5A F-Fused]
 end
 
-VPrim --> |1,5mm<sup>2| Steering
-subgraph Steering
-    direction LR 
-    Bus-Controller --- Servo#1 --- |????| Servo#2 --- |????| Servo#3 --- |????| Servo#4
+PDF1 --> |1,5mm<sup>2| Steering-Bus
+subgraph Steering-Bus
+    direction TB
+    Servo#1 --- |1,5mm<sup>2| Servo#2 --- |1,5mm<sup>2| Servo#3 --- |1,5mm<sup>2| Servo#4
 end
 
 
-PDF1--> |4x 4mm<sup>2| Drive-Train
+PDF2--> |4x 4mm<sup>2| Drive-Train
 SDF1 --> |4x 0,5mm<sup>2| Drive-Train
 subgraph Drive-Train
     direction TB
@@ -38,10 +40,12 @@ subgraph Drive-Train
     ESC#4 --> |3x 4mm<sup>2| Motor#4
 end
 
-5V-Rail --> |????| Control
+SDF2 ---> |0,5mm<sup>2| Control
 subgraph Control
     Raspberry-Pi
 end
 
-linkStyle 0,2,3,4,5,7 stroke:red
-linkStyle 1,6,8 stroke:yellow
+linkStyle 0,2,3,4,5,7,9,10,17 stroke:red
+linkStyle 1,6,8,11,12,18 stroke:orange
+linkStyle 13,14,15,16 stroke:green
+linkStyle 23 stroke:blue
