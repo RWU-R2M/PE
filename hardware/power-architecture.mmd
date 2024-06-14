@@ -1,7 +1,7 @@
 ---
 title: "Power Architecture"
 ---
-%% v1.0.0
+%% v1.0.1
 
 graph LR
 
@@ -21,3 +21,11 @@ Primary-Distribution
 Secondary-Distribution
 end
 
+Primary-Distribution & Secondary-Distribution --> Downstream-Devices
+subgraph Downstream-Devices
+direction LR
+DC/DC-Converters
+Raspberry-Pi
+Motors
+Sensors
+end
