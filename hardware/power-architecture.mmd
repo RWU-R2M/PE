@@ -1,0 +1,23 @@
+---
+title: "Power Architecture"
+---
+%% v1.0.0
+
+graph LR
+
+subgraph Energy-Storage
+Primary-Battery
+Secondary-Battery
+end
+
+Primary-Battery & Secondary-Battery --> Kill-Switch
+subgraph Emergency-Stop
+Kill-Switch
+end
+
+Kill-Switch --> Primary-Distribution & Secondary-Distribution
+subgraph Power-Distribution
+Primary-Distribution
+Secondary-Distribution
+end
+
