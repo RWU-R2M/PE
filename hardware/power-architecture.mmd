@@ -1,7 +1,7 @@
 ---
 title: "Power Architecture"
 ---
-%% v1.0.2
+%% v1.0.3
 
 graph LR
 
@@ -10,12 +10,12 @@ Primary-Battery
 Secondary-Battery
 end
 
-Primary-Battery & Secondary-Battery --> Kill-Switch
+Primary-Battery & Secondary-Battery --> ES
 subgraph Emergency-Stop
-Kill-Switch
+ES[Kill-Switch \n & Main Relay]
 end
 
-Kill-Switch --> Primary-Distribution & Secondary-Distribution
+ES --> Primary-Distribution & Secondary-Distribution
 subgraph Power-Distribution
 Primary-Distribution
 Secondary-Distribution
